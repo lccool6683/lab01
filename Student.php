@@ -13,6 +13,7 @@
  */
 class Student {
 
+    //student constructer
     function __construct() {
         $this->surname = '';
         $this->first_name = '';
@@ -20,14 +21,17 @@ class Student {
         $this->grades = array();
     }
 
+    //add email
     function add_email($which, $address) {
         $this->emails[$which] = $address;
     }
 
+    //add grade
     function add_grade($grade) {
         $this->grades[] = $grade;
     }
 
+    //compute avarage
     function average() {
         $total = 0;
         foreach ($this->grades as $value)
